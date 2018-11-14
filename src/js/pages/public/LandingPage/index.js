@@ -2,7 +2,7 @@ import React from 'react';
 
 function LandingPage (props) {
     return(
-        <div className="app">
+        <div>
             Landing Page
         </div> 
     )

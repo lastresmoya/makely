@@ -13,13 +13,19 @@ const ScrollToTop = () => {
     return null;
 };
 
-// import HomePage from "./pages/HomePage";
-import LandingPage from "./pages/LandingPage";
+// Public Routes
+import LandingPage from "./pages/public/LandingPage";
+import FindCreatorsPage from "./pages/public/FindCreatorsPage";
+import MessagesPage from "./pages/private/Profile/MessagesPage";
+import MyJobsPage from "./pages/private/Profile/MyJobsPage";
+
+// Logged Routes
+
 
 class AppContainer extends Component {
     componentDidMount() {
         AOS.init({
-            offset: 200,
+            offset: 50,
             duration: 600,
             easing: 'ease-in-out-sine',
             delay: 100,
@@ -32,8 +38,12 @@ class AppContainer extends Component {
                 <div>
                     <Route component={ScrollToTop} />
                     <Route exact path='/' component={LandingPage} />
-                    {/* <Route exact path='/' component={HomePage} /> */}
-                    {/* <Route path='/login' component={LoginPage} /> */}
+                    <Route exact path='/find-creators' component={FindCreatorsPage} />
+
+                    {/* Profile Routes */}
+                    <Route exact path='/profile/messages' component={MessagesPage} />
+                    <Route exact path='/profile/my-jobs' component={MyJobsPage} />
+
                     {/* <Route path="/clinician" render={() => <Dashboard {...{ currentDash: 'clinician' }} />} />
                     <Route path="/doctor" render={() => <Dashboard {...{ currentDash: 'doctor' }} />} /> */}
 
