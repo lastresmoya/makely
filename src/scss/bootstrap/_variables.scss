@@ -42,7 +42,7 @@ $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #00FAC2 !default;
 $teal:    #20c997 !default;
-$cyan:    #00E5EE !default;
+$cyan:    #10C0FB !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -69,7 +69,7 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 // $dark:          $gray-800 !default;
-$dark:          #191E2D !default;
+$dark:          #212738 !default;
 
 
 $theme-colors: () !default;
@@ -222,7 +222,7 @@ $transition-collapse:         height .35s ease !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      'Montserrat',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
@@ -237,7 +237,7 @@ $font-size-sm:                ($font-size-base * .875) !default;
 
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
-$font-weight-bold:            500 !default;
+$font-weight-bold:            600 !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
@@ -251,7 +251,7 @@ $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      ($spacer / 2) !default;
 $headings-font-family:        inherit !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        $font-weight-normal !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 

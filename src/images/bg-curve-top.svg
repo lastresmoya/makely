@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="474px" viewBox="0 0 1440 474" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>bg-curve-bottom</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="474"></rect>
+    </defs>
+    <g id="Landing-Page-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bg-curve-bottom">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask" fill-rule="nonzero"></g>
+            <path d="M-50.4409978,90.530475 C259.762646,-36.4804023 1440.73061,-31.7869999 1619.67817,116.89861 C1798.62574,265.584219 1720.10424,915.485812 1558.59391,932.113197 C1397.08357,948.740582 -73.9455581,985.834116 -191.319601,841.879333 C-308.693644,697.924549 -360.644642,217.541352 -50.4409978,90.530475 Z" id="Rectangle-3-Copy-5" fill="#212738" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

@@ -20,6 +20,64 @@ header {
     background-attachment: fixed;
 }
 
+
+.btn {
+    &.btn-circle {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        font-size: $font-size-lg;
+    }
+}
+.btn {
+    &.rounded-lg {
+        border-radius: 10rem;
+    }
+}
+
+.btn-custom {
+    @extend .d-inline-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    @extend .py-3;
+    @extend .px-5;
+    font-weight: $font-weight-bold;
+    small {font-size: .9rem;}
+}
+
+footer {
+    background-color: #181D2B;
+}
+
+.bg-curve {
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    &.bg-curve-top {
+        background-image: url('../images/bg-curve-top.svg');
+        background-position: center top;
+        padding-top: 10rem;
+        padding-bottom: 8rem;
+    }
+    &.bg-curve-bottom {
+        background-position: center top;
+        background-image: url('../images/bg-curve-bottom.svg');
+        padding-bottom: 8rem;
+    }
+}
+
+.bg-detail {
+    background-repeat: no-repeat;
+    &.bg-detail-left {
+        background-position: top left;
+        background-image: url('../images/figures1.png');
+    }
+    &.bg-detail-right {
+        background-position: top right;
+        background-image: url('../images/figures2.png');
+        padding-top: 10rem;
+    }
+}
+
 // .app {
 //     height: 100rem;
 // }
