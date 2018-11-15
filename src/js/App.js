@@ -16,11 +16,13 @@ const ScrollToTop = () => {
 // Public Routes
 import LandingPage from "./pages/public/LandingPage";
 import FindCreatorsPage from "./pages/public/FindCreatorsPage";
+
+// Logged Routes
 import MessagesPage from "./pages/private/Profile/MessagesPage";
 import MyJobsPage from "./pages/private/Profile/MyJobsPage";
 
-// Logged Routes
-
+// Components
+import Main from "./components/Main";
 
 class AppContainer extends Component {
     componentDidMount() {
@@ -35,7 +37,7 @@ class AppContainer extends Component {
     render() {
         return (
             <Router>
-                <div>
+                <Main>
                     <Route component={ScrollToTop} />
                     <Route exact path='/' component={LandingPage} />
                     <Route exact path='/find-creators' component={FindCreatorsPage} />
@@ -57,7 +59,7 @@ class AppContainer extends Component {
                             Click Me!
                         </button>
                     } */}
-                </div>
+                </Main>
             </Router>
         );
     }
