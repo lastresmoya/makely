@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../_shared/Navbar"; 
-import Footer from "../_shared/Footer";
+import Navbar from "Components/Navbar"; 
+import Footer from "Components/Footer";
 
 function Main(props) {
     return (

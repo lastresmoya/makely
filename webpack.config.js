@@ -13,6 +13,8 @@ const path = require('path')
 // })
 // var cssConfig = isProd ? cssProd : cssDev
 
+console.log(path.resolve(__dirname));
+
 module.exports = {
     entry: path.resolve(__dirname, "src/js/index.js"),
     output: {
@@ -30,6 +32,10 @@ module.exports = {
     },
     resolve: {
         extensions: [".js", ".jsx"],
+        alias: {
+            Components : path.resolve(__dirname, 'src/js/components'),
+            Images: path.resolve(__dirname, 'src/images')
+        },
     },
     plugins: [
         new CopyWebpackPlugin([

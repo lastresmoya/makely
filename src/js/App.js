@@ -22,7 +22,7 @@ import MessagesPage from "./pages/private/Profile/MessagesPage";
 import MyJobsPage from "./pages/private/Profile/MyJobsPage";
 
 // Components
-import Main from "./components/Main";
+import Main from "Components/Main";
 
 class AppContainer extends Component {
     componentDidMount() {
