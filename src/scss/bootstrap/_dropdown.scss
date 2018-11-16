@@ -6,11 +6,13 @@
 
 .dropdown-toggle {
   // Generate the caret automatically
-  @include caret;
+//   @include caret;
 }
 
 // The dropdown menu
 .dropdown-menu {
+    // 
+
   position: absolute;
   top: 100%;
   left: 0;
@@ -20,7 +22,8 @@
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y 0;
   margin: $dropdown-spacer 0 0; // override default ul
-  font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
+//   font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
+  font-size: $font-size-sm; // Redeclare because nesting can cause inheritance issues
   color: $body-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
@@ -127,5 +130,6 @@
   margin-bottom: 0; // for use with heading elements
   font-size: $font-size-sm;
   color: $dropdown-header-color;
+  font-weight: $font-weight-bold;
   white-space: nowrap; // as with > li > a
 }

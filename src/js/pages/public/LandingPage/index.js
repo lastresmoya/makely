@@ -32,8 +32,6 @@ function LandingPage (props) {
                 </div>
             </header>
 
-            
-
             <section className="py-5 bg-dark text-white text-center ">
                 <div className="container py-4">
                     <h1 className="d-flex flex-column mb-5"><span className="text-danger">How</span><span className="display-4 font-weight-bold">It Works</span></h1>

@@ -79,6 +79,18 @@ footer {
     }
 }
 
+.dropdown-toggle {
+    &.btn-light {
+        background-color: $white;
+        border-color: $white;
+        color: $text-muted;
+    }
+}
+
 // .app {
 //     height: 100rem;
 // }
+
+.btn {
+    &.btn-light {color: #7C706E;}
+}
