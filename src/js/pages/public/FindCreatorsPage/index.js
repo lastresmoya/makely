@@ -6,7 +6,7 @@ function FindCreatorsPage (props) {
     return(
         <div>
             <FiltersBar/>
-            <div className="container">
+            <div className="container my-4 pb-5">
                 <CreatorsList/>
             </div>
         </div> 

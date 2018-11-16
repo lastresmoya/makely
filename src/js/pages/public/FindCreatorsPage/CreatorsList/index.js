@@ -1,9 +1,17 @@
 import React from "react";
+import CreatorListItem from "./CreatorListItem";
+import Pagination from "Components/Navs/Pagination";
 
 function CreatorsList(props) {
     return (
         <div>
-            Creators List Goes ere
+            <CreatorListItem/>
+            <CreatorListItem />
+            <CreatorListItem />
+            <CreatorListItem />
+            <div className="pt-4">
+                <Pagination />
+            </div>
         </div>
     );
 }

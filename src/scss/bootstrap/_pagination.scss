@@ -7,12 +7,15 @@
 .page-link {
   position: relative;
   display: block;
+  font-weight: $font-weight-bold;
   padding: $pagination-padding-y $pagination-padding-x;
-  margin-left: -$pagination-border-width;
+//   margin-left: -$pagination-border-width;
+  margin-left: .4rem;
   line-height: $pagination-line-height;
   color: $pagination-color;
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
+  @include border-radius($border-radius);
 
   @include hover-focus {
     color: $pagination-hover-color;
@@ -32,12 +35,12 @@
   &:first-child {
     .page-link {
       margin-left: 0;
-      @include border-left-radius($border-radius);
+    //   @include border-left-radius($border-radius);
     }
   }
   &:last-child {
     .page-link {
-      @include border-right-radius($border-radius);
+    //   @include border-right-radius($border-radius);
     }
   }
 
