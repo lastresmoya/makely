@@ -26,11 +26,11 @@ function CreatorListItem (props) {
                     </div>
                     <p><span className="text-danger"><FaIcon icon={faMapMarkerAlt} /></span> <span className="text-muted">London, United Kingdom</span></p>
                     <div>
-                        <a class="badge badge-light  mr-1">PRINTING</a>
-                        <a class="badge badge-light  mr-1">MODELING</a>
-                        <a class="badge badge-light  mr-1">CONSULTATION</a>
-                        <a class="badge badge-light  mr-1"><FaIcon icon={faGlobe}/> GLOBAL SHIPPING</a>
-                        <a class="badge badge-light "><FaIcon icon={faShoppingCart} /> MARKET</a>
+                        <a className="badge badge-light  mr-1">PRINTING</a>
+                        <a className="badge badge-light  mr-1">MODELING</a>
+                        <a className="badge badge-light  mr-1">CONSULTATION</a>
+                        <a className="badge badge-light  mr-1"><FaIcon icon={faGlobe}/> GLOBAL SHIPPING</a>
+                        <a className="badge badge-light "><FaIcon icon={faShoppingCart} /> MARKET</a>
                     </div>
                 </div>
                 <div className="align-self-center">

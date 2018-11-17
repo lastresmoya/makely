@@ -2,6 +2,7 @@ import React from "react";
 import FaIcon from '@fortawesome/react-fontawesome';
 import { faAngleDown, faTimes } from '@fortawesome/fontawesome-free-solid';
 import CheckInput from "Components/Forms/CheckInput";
+import SortBy from "Components/Forms/SortBy";
 
 function FiltersBar (props) {
     return (
@@ -138,16 +139,7 @@ function FiltersBar (props) {
                                 </div>
 
                                 {/* Sort By */}
-                                <div className="dropdown">
-                                    <a className="btn btn-light dropdown-toggle text-muted" href="#" role="button" id="ddSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Sort by popularity  <FaIcon icon={faAngleDown} />
-                                    </a>
-
-                                    <div className="dropdown-menu" aria-labelledby="ddSort">
-                                        <form className="py-1 px-3">
-                                        </form>
-                                    </div>
-                                </div>
+                                <SortBy/>
                             </div>
                         </div>
                     </div>

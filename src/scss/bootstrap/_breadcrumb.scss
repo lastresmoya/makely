@@ -9,6 +9,7 @@
 }
 
 .breadcrumb-item {
+    a {color: $breadcrumb-active-color;}
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item::before {
     display: inline-block; // Suppress underlining of the separator in modern browsers

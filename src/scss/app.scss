@@ -98,3 +98,28 @@ footer {
 .shadow-sm {
     box-shadow: 0 0 4px rgba(0,0,0,.15);
 }
+
+.card-img-wrapper {
+    position: relative;
+
+    .upper, .lower {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+    .upper {
+        top: 0;
+    }
+    .lower {
+        bottom: 0;
+        .avatar {
+            border: 1px solid $white;
+            border-radius: 10rem;
+            transform: translate(0,1.5rem);
+        }
+    }
+    .card-img {
+        object-fit: cover
+    }
+}
