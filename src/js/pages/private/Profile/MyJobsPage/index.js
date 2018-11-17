@@ -11,7 +11,7 @@ import { faTimesCircle } from '@fortawesome/fontawesome-free-regular';
 function MyJobs (props) {
     return(
         <div>
-            <Breadcrumbs/>
+            <Breadcrumbs current="My Jobs"/>
             <PageTitle title="All Jobs"/>
             <div className="container py-4">
                 <div className="row">
