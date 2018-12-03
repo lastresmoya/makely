@@ -10,7 +10,8 @@ class FiltersBar extends React.Component {
         this.state = {
             selectedFilters: ['FilterTest'],
             filters: {
-                locations: ['United Kingdom', 'United States']
+                locations: ['United Kingdom', 'United States'],
+                languages: ['English', 'Spanish']
             }
         }
 
@@ -54,6 +55,16 @@ class FiltersBar extends React.Component {
                 if (i != -1) {
                     filters.splice(i, 1);
                     this.setState({ 'filters.locations': filters });
+                }
+                break;
+            
+            case 'languageFilters':
+                filters = this.state.filters.languages;
+                i = filters.indexOf(filter);
+        
+                if (i != -1) {
+                    filters.splice(i, 1);
+                    this.setState({ 'filters.languages': filters });
                 }
                 break;
 
@@ -169,8 +180,18 @@ class FiltersBar extends React.Component {
                                                     <input type="text" className="form-control form-control-sm" id="languageInput" placeholder="Add Language" />
                                                 </div>
                                                 <div className="px-2">
-                                                    <div><small className="py-2 mr-2 font-weight-bold">English <span className="text-muted"><FaIcon icon={faTimes} /></span></small></div>
-                                                    <div><small className="py-2 mr-2 font-weight-bold">Spanish <span className="text-muted"><FaIcon icon={faTimes} /></span></small></div>
+                                                    {this.state.filters.languages.map((language, i) => {
+                                                        return (
+                                                            <div key={i}>
+                                                                <small className="py-2 mr-2 font-weight-bold">
+                                                                    {language}
+                                                                    <span className="text-muted ml-2" onClick={() => this.removeFilter('languageFilters', `${language}`)}>
+                                                                        <FaIcon icon={faTimes} />
+                                                                    </span>
+                                                                </small>
+                                                            </div>
+                                                        )
+                                                    })}
                                                 </div>
                                             </form>
                                         </div>
