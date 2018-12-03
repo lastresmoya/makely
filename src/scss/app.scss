@@ -131,6 +131,12 @@ footer {
     }
 }
 
+.card-creator {
+    .badges-container  {
+        bottom: 0;
+    }
+}
+
 .bg-light-secondary {
     background-color: lighten($secondary,32%);
 }
