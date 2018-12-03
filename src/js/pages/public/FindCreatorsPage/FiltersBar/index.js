@@ -2,25 +2,63 @@ import React from "react";
 import FaIcon from '@fortawesome/react-fontawesome';
 import { faAngleDown, faTimes } from '@fortawesome/fontawesome-free-solid';
 import CheckInput from "Components/Forms/CheckInput";
-import SortBy from "Components/Forms/SortBy";
-
 
 class FiltersBar extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            selectedFilters: ['filter1', 'filter2', 'filter3', 'filter4', 'filter5', 'filter6']
+            selectedFilters: ['FilterTest'],
+            filters: {
+                locations: ['United Kingdom', 'United States']
+            }
+        }
+
+        this.addFilter = this.addFilter.bind(this);
+    }
+
+    addFilter(event) {
+        const currentFilters = this.state.selectedFilters;
+        const isChecked = event.target.checked;
+        const checkedFilter = event.target.id;
+
+        if (isChecked) {
+            currentFilters.push(checkedFilter);
+            this.setState({ selectedFilters: currentFilters });
+        }
+
+        else {
+            this.removeFilter(checkedFilter);
         }
     }
-    
-    removeFilter(filter) {
-        const currentFilters = this.state.selectedFilters;
-        var i = currentFilters.indexOf(filter);
 
-        if(i != -1) {
-            currentFilters.splice(i, 1);
-            this.setState({ selectedFilters: currentFilters });
+    removeFilter(filterCategory, filter) {
+        let filters,
+            i;
+
+        switch (filterCategory) {
+            case 'currentFilters':
+                filters = this.state.selectedFilters;
+                i = filters.indexOf(filter);
+
+                if (i != -1) {
+                    filters.splice(i, 1);
+                    this.setState({ selectedFilters: filters });
+                }
+                break;
+            
+            case 'locationFilters':
+                filters = this.state.filters.locations;
+                i = filters.indexOf(filter);
+        
+                if (i != -1) {
+                    filters.splice(i, 1);
+                    this.setState({ 'filters.locations': filters });
+                }
+                break;
+
+            default:
+                break;
         }
     }
 
@@ -45,8 +83,18 @@ class FiltersBar extends React.Component {
                                                     <input type="text" className="form-control form-control-sm" id="locationInput" placeholder="Add Location" />
                                                 </div>
                                                 <div className="px-2">
-                                                    <div><small className="py-2 mr-2 font-weight-bold">United Kingdom <span className="text-muted"><FaIcon icon={faTimes} /></span></small></div>
-                                                    <div><small className="py-2 mr-2 font-weight-bold">United States <span className="text-muted"><FaIcon icon={faTimes} /></span></small></div>
+                                                    {this.state.filters.locations.map((location, i) => {
+                                                        return (
+                                                            <div key={i}>
+                                                                <small className="py-2 mr-2 font-weight-bold">
+                                                                    {location}
+                                                                    <span className="text-muted ml-2" onClick={() => this.removeFilter('locationFilters', `${location}`)}>
+                                                                        <FaIcon icon={faTimes} />
+                                                                    </span>
+                                                                </small>
+                                                            </div>
+                                                        )
+                                                    })}
                                                 </div>
                                             </form>
                                         </div>
@@ -60,9 +108,9 @@ class FiltersBar extends React.Component {
 
                                         <div className="dropdown-menu" aria-labelledby="ddServices">
                                             <form className="py-1 px-3">
-                                                <CheckInput label="printing" />
-                                                <CheckInput label="Modelling" />
-                                                <CheckInput label="Consultation" />
+                                                <CheckInput label="printing" onClick={this.addFilter} />
+                                                <CheckInput label="Modelling" onClick={this.addFilter} />
+                                                <CheckInput label="Consultation" onClick={this.addFilter} />
                                             </form>
                                         </div>
                                     </div>
@@ -75,8 +123,8 @@ class FiltersBar extends React.Component {
 
                                         <div className="dropdown-menu" aria-labelledby="ddMaterials">
                                             <form className="py-1 px-3">
-                                                <CheckInput label="Plastic" />
-                                                <CheckInput label="Metals" />
+                                                <CheckInput label="Plastic" onClick={this.addFilter} />
+                                                <CheckInput label="Metals" onClick={this.addFilter} />
                                             </form>
                                             <div className="dropdown-divider"></div>
 
@@ -84,27 +132,27 @@ class FiltersBar extends React.Component {
                                             <h6 className="dropdown-header">Plastic</h6>
                                             <div className="px-3 py-1">
                                                 <div className="form-row">
-                                                    <div className="col-sm-6"><CheckInput label="PLA" /></div>
-                                                    <div className="col-sm-6"><CheckInput label="Resin" /></div>
+                                                    <div className="col-sm-6"><CheckInput label="PLA" onClick={this.addFilter} /></div>
+                                                    <div className="col-sm-6"><CheckInput label="Resin" onClick={this.addFilter} /></div>
                                                 </div>
                                                 <div className="form-row">
-                                                    <div className="col-sm-6"><CheckInput label="PETG" /></div>
-                                                    <div className="col-sm-6"><CheckInput label="ASA" /></div>
+                                                    <div className="col-sm-6"><CheckInput label="PETG" onClick={this.addFilter} /></div>
+                                                    <div className="col-sm-6"><CheckInput label="ASA" onClick={this.addFilter} /></div>
                                                 </div>
                                                 <div className="form-row">
-                                                    <div className="col-sm-6"><CheckInput label="ABS" /></div>
-                                                    <div className="col-sm-6"><CheckInput label="Nylon" /></div>
+                                                    <div className="col-sm-6"><CheckInput label="ABS" onClick={this.addFilter} /></div>
+                                                    <div className="col-sm-6"><CheckInput label="Nylon" onClick={this.addFilter} /></div>
                                                 </div>
                                                 <div className="form-row">
-                                                    <div className="col-sm-6"><CheckInput label="TPU" /></div>
-                                                    <div className="col-sm-6"><CheckInput label="PEI" /></div>
+                                                    <div className="col-sm-6"><CheckInput label="TPU" onClick={this.addFilter} /></div>
+                                                    <div className="col-sm-6"><CheckInput label="PEI" onClick={this.addFilter} /></div>
                                                 </div>
                                             </div>
                                             <h6 className="dropdown-header">Metals</h6>
                                             <div className="px-3 py-1">
                                                 <div className="form-row">
-                                                    <div className="col-sm-6"><CheckInput label="Steel" /></div>
-                                                    <div className="col-sm-6"><CheckInput label="Aluminium" /></div>
+                                                    <div className="col-sm-6"><CheckInput label="Steel" onClick={this.addFilter} /></div>
+                                                    <div className="col-sm-6"><CheckInput label="Aluminium" onClick={this.addFilter} /></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -135,7 +183,7 @@ class FiltersBar extends React.Component {
                                         </a>
 
                                         <div className="dropdown-menu" aria-labelledby="ddProjects">
-                                            <h6 className="dropdown-header">Project Completed</h6>
+                                            {/* <h6 className="dropdown-header">Project Completed</h6> */}
                                             <form className="py-1 px-3">
                                                 <CheckInput label="0-5" />
                                                 <CheckInput label="6-10" />
@@ -143,23 +191,6 @@ class FiltersBar extends React.Component {
                                             </form>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div className="btn-group ml-auto">
-                                    {/* More Filters */}
-                                    <div className="dropdown">
-                                        <a className="btn btn-light dropdown-toggle text-muted" href="#" role="button" id="ddMoreFilters" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            More Filters  <FaIcon icon={faAngleDown} />
-                                        </a>
-
-                                        <div className="dropdown-menu" aria-labelledby="ddMoreFilters">
-                                            <form className="py-1 px-3">
-                                            </form>
-                                        </div>
-                                    </div>
-
-                                    {/* Sort By */}
-                                    <SortBy />
                                 </div>
                             </div>
                         </div>
@@ -177,8 +208,9 @@ class FiltersBar extends React.Component {
                                                 <button
                                                     className="btn btn-light btn-sm mr-2 font-weight-bold"
                                                     key={i}
+                                                    onClick={() => this.removeFilter('currentFilters', `${filter}`)}
                                                 >
-                                                    {filter} <FaIcon icon={faTimes} onClick={() => this.removeFilter(`${filter}`)}/>
+                                                    {filter} <FaIcon icon={faTimes} />
                                                 </button>
                                             )
                                         })
