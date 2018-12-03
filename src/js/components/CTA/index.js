@@ -10,8 +10,8 @@ function CTA(props) {
                         <div className="d-sm-flex justify-content-sm-between align-items-sm-end">
                             <div>
                                 <h2 className="h3 m-0  d-flex flex-column align-items-start">
-                                    <span className="text-secondary">What</span>
-                                    <span className="display-4 text-white font-weight-normal">can I do with Makely</span>
+                                    <span className="text-secondary font-weight-bold">What</span>
+                                    <span className="display-4 text-white font-weight-bold">can I do with Makely</span>
                                 </h2>
                             </div>
                             <div className="col-auto mb-2">

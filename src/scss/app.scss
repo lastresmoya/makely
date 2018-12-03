@@ -43,9 +43,16 @@ header {
     @extend .py-3;
     @extend .px-5;
     font-weight: $font-weight-bold;
-    small {font-size: .9rem;}
+    small {font-size: .87rem;}
 }
 
+.btn {
+    &-sign {
+        &:hover {
+            color: black !important;
+        }
+    }
+}
 footer {
     background-color: #181D2B;
 }
@@ -134,4 +141,10 @@ footer {
 .message-box{
     height: 30rem;
     overflow-y: auto;
+}
+
+.no-underline {
+    &:hover {
+        text-decoration: none;
+    }
 }

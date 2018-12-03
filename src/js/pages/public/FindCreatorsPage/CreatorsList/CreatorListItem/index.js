@@ -20,11 +20,11 @@ function CreatorListItem (props) {
                     <div className="d-flex align-items-center justify-content-start pt-2 pb-1">
                         <span className="font-weight-bold h4 mr-3 mb-0">John Brewer</span>
                         <FaIcon icon={faThumbsUp} /> 
-                        <small className="font-weight-bold text-muted ml-2">98%</small>
+                        <small className="font-weight-bold text-muted ml-2 font-weight-bold">98%</small>
                         <span className="text-muted ml-5"><FaIcon icon={faTrophy} /></span>
                         
                     </div>
-                    <p><span className="text-danger"><FaIcon icon={faMapMarkerAlt} /></span> <span className="text-muted">London, United Kingdom</span></p>
+                    <p><span className="text-danger"><FaIcon icon={faMapMarkerAlt} /></span> <span className="text-muted font-weight-bold">London, United Kingdom</span></p>
                     <div>
                         <a className="badge badge-light  mr-1">PRINTING</a>
                         <a className="badge badge-light  mr-1">MODELING</a>

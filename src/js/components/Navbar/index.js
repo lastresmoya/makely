@@ -27,8 +27,8 @@ function Navbar(props) {
                         </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
-                        <a className="btn btn-link my-2 my-sm-0 text-white">LOGIN</a>
-                        <a className="btn btn-outline-success my-2 my-sm-0 rounded-lg text-white">SIGN UP</a>
+                        <a className="btn btn-link my-2 my-sm-0 text-white nav-link">LOGIN</a>
+                        <a className="btn btn-sign btn-outline-success my-2 my-sm-0 rounded-lg text-white nav-link">SIGN UP</a>
                     </form>
                 </div>
             </div>
