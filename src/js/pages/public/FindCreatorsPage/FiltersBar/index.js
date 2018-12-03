@@ -16,19 +16,11 @@ class FiltersBar extends React.Component {
     
     removeFilter(filter) {
         const currentFilters = this.state.selectedFilters;
-
-        console.log(currentFilters);
-
         var i = currentFilters.indexOf(filter);
-
-        console.log(i);
 
         if(i != -1) {
             currentFilters.splice(i, 1);
-
-            console.log(currentFilters);
-
-            this.setState({ selectedFilters: currentFilters}, () => console.log(this.state.selectedFilters));
+            this.setState({ selectedFilters: currentFilters });
         }
     }
 
