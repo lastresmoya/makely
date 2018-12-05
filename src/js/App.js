@@ -16,6 +16,12 @@ const ScrollToTop = () => {
 // Public Routes
 import LandingPage from "./pages/public/LandingPage";
 import FindCreatorsPage from "./pages/public/FindCreatorsPage";
+import AboutPage from "./pages/public/AboutPage";
+import FAQsPage from "./pages/public/FAQsPage";
+import ContactPage from "./pages/public/ContactPage";
+import LoginPage from "./pages/public/LoginPage";
+import SignupPage from "./pages/public/SignupPage";
+
 
 // Logged Routes
 import MessagesPage from "./pages/private/Profile/MessagesPage";
@@ -41,6 +47,11 @@ class AppContainer extends Component {
                     <Route component={ScrollToTop} />
                     <Route exact path='/' component={LandingPage} />
                     <Route exact path='/find-creators' component={FindCreatorsPage} />
+                    <Route exact path='/about' component={AboutPage} />
+                    <Route exact path='/faqs' component={FAQsPage} />
+                    <Route exact path='/contact' component={ContactPage} />
+                    <Route exact path='/login' component={LoginPage} />
+                    <Route exact path='/signup' component={SignupPage} />
 
                     {/* Profile Routes */}
                     <Route exact path='/profile/messages' component={MessagesPage} />

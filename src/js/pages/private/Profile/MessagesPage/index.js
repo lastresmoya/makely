@@ -67,7 +67,7 @@ function MessagesPage (props) {
 
                                 {/* Me Mark Declined */}
                                 <div className="d-flex align-items-start mb-4">
-                                    <div className="px-3 pt-3 pb-4 mr-3 ml-5 bg-light-danger card shadow-sm border-0 d-flex justify-content-start flex-row">
+                                    <div className="px-3 pt-3 pb-4 mr-3 -5 bg-light-danger card shadow-sm border-0 d-flex justify-content-start flex-row">
                                         <div className="h5 text-danger mr-3"><FaIcon icon={faTimesCircle}/></div>
                                         <div className="w-100">
                                             <strong>You have declined this project</strong>
