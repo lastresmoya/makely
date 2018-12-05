@@ -11,7 +11,7 @@ function Testimonials (props) {
             <div className="row">
                 <div className="col">
                     <h2 className="h3 pb-2 d-flex flex-column align-items-center justify-content-center">
-                        <span className="text-info">What</span>
+                        <span className="text-info font-weight-bold">What</span>
                         <span className="display-4 font-weight-bold">people say?</span>
                     </h2>
                 </div>

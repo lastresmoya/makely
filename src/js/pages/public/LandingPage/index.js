@@ -25,7 +25,7 @@ function LandingPage (props) {
                     <div className="row">
                         <div className="col-sm-6">
                             <h1 className="text-white display-4 font-weight-bold">Find 3D printers online</h1>
-                            <p className="lead text-white py-4">With Makely you can find anyone with a 3D printer to create your idea. The only limit is your imagination!</p>
+                            <p className="lead text-white py-4 font-weight-bold">With Makely you can find anyone with a 3D printer to create your idea. The only limit is your imagination!</p>
                             <BtnPrimary content="GET STARTED"/>
                         </div>
                     </div>
@@ -34,22 +34,25 @@ function LandingPage (props) {
 
             <section className="py-5 bg-dark text-white text-center ">
                 <div className="container py-4">
-                    <h1 className="d-flex flex-column mb-5"><span className="text-danger">How</span><span className="display-4 font-weight-bold">It Works</span></h1>
+                    <h2 className="h2 pb-2 d-flex flex-column align-items-center">
+                        <span className="text-danger font-weight-bold">How</span>
+                        <span className="display-4 text-white font-weight-bold">It Works</span>
+                    </h2>
                     <div className="row pb-5">
                         <div className="col-sm-3">
-                            <p className="d-flex flex-column" style={{height:"6rem"}}><strong className="text-danger h2">1</strong><span>Find a Creator</span></p>
+                            <p className="d-flex flex-column" style={{height:"6rem"}}><strong className="text-danger h2">1</strong><span className="font-weight-bold">Find a Creator</span></p>
                             <img src={iconCreator} alt=""/>
                         </div>
                         <div className="col-sm-3">
-                            <p className="d-flex flex-column" style={{height:"6rem"}}><strong className="text-danger h2">2</strong><span>Agree on a price</span></p>
+                            <p className="d-flex flex-column" style={{height:"6rem"}}><strong className="text-danger h2">2</strong><span className="font-weight-bold">Agree on a price</span></p>
                             <img src={iconAgree} alt=""/>
                         </div>
                         <div className="col-sm-3">
-                            <p className="d-flex flex-column" style={{height:"6rem"}}><strong className="text-danger h2">3</strong><span>Creator designs and prints the item</span></p>
+                            <p className="d-flex flex-column" style={{height:"6rem"}}><strong className="text-danger h2">3</strong><span className="font-weight-bold">Creator designs and prints the item</span></p>
                             <img src={icon3D} alt=""/>
                         </div>
                         <div className="col-sm-3">
-                            <p className="d-flex flex-column" style={{height:"6rem"}}><strong className="text-danger h2">4</strong><span>Your item gets delivered</span></p>
+                            <p className="d-flex flex-column" style={{height:"6rem"}}><strong className="text-danger h2">4</strong><span className="font-weight-bold">Your item gets delivered</span></p>
                             <img src={iconCreator} alt=""/>
                         </div>
                     </div>
@@ -88,28 +91,48 @@ function LandingPage (props) {
                     <div className="row">
                         <div className="col-sm-10 m-auto">
                             <h2 className="h1 pb-2 d-flex flex-column align-items-start">
-                                <span className="text-secondary">What</span><span className="display-4">can I do with Makely</span>
+                                <span className="text-secondary font-weight-bold">What</span><span className="display-4 font-weight-bold">can I do with Makely</span>
                             </h2>
                             <div className="row text-center my-5">
                                 <div className="col-sm-3">
                                     <img src={iconPrinter} alt="" />
-                                    <h3 className="text-secondary h6 my-4"><strong>3D Print</strong></h3>
-                                    <p className="text-muted"><small>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metuso.</small></p>
+                                    <h3 className="text-secondary h6 my-4 font-weight-bold">
+                                        <strong>3D Print</strong></h3>
+                                    <p className="text-muted">
+                                        <small className="font-weight-bold">
+                                            Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metuso.
+                                        </small>
+                                    </p>
                                 </div>
                                 <div className="col-sm-3">
                                     <img src={icon3D} alt="" />
-                                    <h3 className="text-secondary h6 my-4"><strong>3D Model</strong></h3>
-                                    <p className="text-muted"><small>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metuso.</small></p>
+                                    <h3 className="text-secondary h6 my-4 font-weight-bold">
+                                        <strong>3D Model</strong></h3>
+                                    <p className="text-muted">
+                                        <small className="font-weight-bold">
+                                            Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metuso.
+                                        </small>
+                                    </p>
                                 </div>
                                 <div className="col-sm-3">
                                     <img src={iconConsult} alt="" />
-                                    <h3 className="text-secondary h6 my-4"><strong>Get Consultation</strong></h3>
-                                    <p className="text-muted"><small>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metuso.</small></p>
+                                    <h3 className="text-secondary h6 my-4 font-weight-bold">
+                                        <strong>Get Consultation</strong></h3>
+                                    <p className="text-muted">
+                                        <small className="font-weight-bold">
+                                            Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metuso.
+                                        </small>
+                                    </p>
                                 </div>
                                 <div className="col-sm-3">
                                     <img src={iconWallet} alt="" />
-                                    <h3 className="text-secondary h6 my-4"><strong>Earn Money</strong></h3>
-                                    <p className="text-muted"><small>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metuso.</small></p>
+                                    <h3 className="text-secondary h6 my-4 font-weight-bold">
+                                        <strong>Earn Money</strong></h3>
+                                    <p className="text-muted">
+                                        <small className="font-weight-bold">
+                                            Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metuso.
+                                        </small>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -125,25 +148,25 @@ function LandingPage (props) {
                     <div className="row py-5">
                         <div className="col-sm-10 m-auto">
                             <h2 className="h4 pb-2 d-flex flex-column align-items-center">
-                                <span className="display-4 text-white">Get Inspired</span>
-                                <span className="text-info">by other creations</span>
+                                <span className="display-4 text-white font-weight-bold">Get Inspired</span>
+                                <span className="text-info font-weight-bold">by other creations</span>
                             </h2>
                             <div className="d-flex justify-content-center text-white py-4">
                                 <figure className="px-2">
                                     <img src={creation1} alt="" className="img-fluid" />
-                                    <figcaption className="py-2">Example 1</figcaption>
+                                    <figcaption className="py-2 font-weight-bold">Example 1</figcaption>
                                 </figure>
                                 <figure className="px-2">
                                     <img src={creation2} alt="" className="img-fluid" />
-                                    <figcaption className="py-2">Example 2</figcaption>
+                                    <figcaption className="py-2 font-weight-bold">Example 2</figcaption>
                                 </figure>
                                 <figure className="px-2">
                                     <img src={creation3} alt="" className="img-fluid" />
-                                    <figcaption className="py-2">Example 3</figcaption>
+                                    <figcaption className="py-2 font-weight-bold">Example 3</figcaption>
                                 </figure>
                                 <figure className="px-2">
                                     <img src={creation4} alt="" className="img-fluid" />
-                                    <figcaption className="py-2">Example 4</figcaption>
+                                    <figcaption className="py-2 font-weight-bold">Example 4</figcaption>
                                 </figure>
                             </div>
                             <div className="row">
@@ -163,13 +186,12 @@ function LandingPage (props) {
                     <div className="row py-5 text-center">   
                         <div className="col">
                             <h2 className="h3 pb-2 d-flex flex-column align-items-center">
-
-                                <span className="text-danger">Explore</span>
-                                <span className="display-4 text-white">all locations</span>
+                                <span className="text-danger font-weight-bold">Explore</span>
+                                <span className="display-4 text-white font-weight-bold">all locations</span>
                             </h2>
                             <img src={map} alt="" className="img-fluid pt-4 pb-3"/>
 
-                            <p className="text-white">Creators available in multiple location across the world. Find one near you now!</p>
+                            <p className="text-white font-weight-bold">Creators available in multiple location across the world. Find one near you now!</p>
                             <BtnSecondary content="EXPLORE ALL"/>
                        </div>
                     </div>
