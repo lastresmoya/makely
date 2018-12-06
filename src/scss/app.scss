@@ -84,6 +84,13 @@ footer {
         background-image: url('../images/figures2.png');
         padding-top: 10rem;
     }
+    &.bg-detail-square {
+        background-position: center right;
+        background-image: url('../images/figures3.png');
+    }
+    &.bg-end-gradient {
+        @include gradient-y(transparent, $gray-200)
+    }
 }
 
 .dropdown-toggle {
@@ -152,5 +159,22 @@ footer {
 .no-underline {
     &:hover {
         text-decoration: none;
+    }
+}
+.divider {
+    width: 3rem;
+    margin: 1.8rem auto;
+    height: 0.3rem;
+    background-color: $gray-200;
+}
+section {
+    &:nth-child(1n) {
+        .divider {background-color: theme-color("secondary");}
+    }
+    &:nth-child(2n) {
+        .divider {background-color: theme-color("primary");}
+    }
+    &:nth-child(3n) {
+        .divider {background-color: theme-color("danger");}
     }
 }
