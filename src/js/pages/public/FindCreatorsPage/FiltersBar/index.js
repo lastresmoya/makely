@@ -78,7 +78,7 @@ class FiltersBar extends React.Component {
             <div>
                 <div className="d-md-none">
                     {/* FilterTop */}
-                    <div className="card">
+                    <div className="card py-3">
                         <a className="px-3 font-weight-bold" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                             Filters <FaIcon icon={faAngleDown} />
                         </a>
