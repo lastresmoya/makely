@@ -144,6 +144,14 @@ footer {
     }
 }
 
+.creator-list__item {
+    .btn-heart {
+        position: absolute;
+        right: 2%;
+        top: 6%;
+    }
+}
+
 .bg-light-secondary {
     background-color: lighten($secondary,32%);
 }
@@ -177,4 +185,17 @@ section {
     &:nth-child(3n) {
         .divider {background-color: theme-color("danger");}
     }
+}
+
+@media screen and (min-width: 768px) {
+    .creator-list__item {
+        .btn-contact {
+            bottom: initial;
+            position: initial;
+            right: initial;
+        }
+        .btn-heart {
+            position: initial;
+        }
+    } 
 }

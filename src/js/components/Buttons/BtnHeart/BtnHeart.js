@@ -7,8 +7,8 @@ function BtnHeart(props) {
         <button
             onClick={props.onClick}
             className={
-                props.isLike ? 'align-self-start btn btn-light rounded-lg bg-white border-0 ml-4 text-danger'
-                : 'align-self-start btn btn-light rounded-lg bg-white border-0 ml-4'
+                props.isLike ? 'btn-heart align-self-start btn btn-light rounded-lg bg-white border-0 ml-4 text-danger'
+                : 'btn-heart align-self-start btn btn-light rounded-lg bg-white border-0 ml-4'
             }
         >
             <FaIcon icon={faHeart} />
