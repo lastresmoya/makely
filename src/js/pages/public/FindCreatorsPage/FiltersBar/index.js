@@ -47,21 +47,21 @@ class FiltersBar extends React.Component {
                     this.setState({ selectedFilters: filters });
                 }
                 break;
-            
+
             case 'locationFilters':
                 filters = this.state.filters.locations;
                 i = filters.indexOf(filter);
-        
+
                 if (i != -1) {
                     filters.splice(i, 1);
                     this.setState({ 'filters.locations': filters });
                 }
                 break;
-            
+
             case 'languageFilters':
                 filters = this.state.filters.languages;
                 i = filters.indexOf(filter);
-        
+
                 if (i != -1) {
                     filters.splice(i, 1);
                     this.setState({ 'filters.languages': filters });
@@ -138,34 +138,39 @@ class FiltersBar extends React.Component {
                                                 <CheckInput label="Metals" onClick={this.addFilter} />
                                             </form>
                                             <div className="dropdown-divider"></div>
-
-                                            <strong className="text-secondary px-3">Advanced Filter <FaIcon icon={faAngleDown} /></strong>
-                                            <h6 className="dropdown-header">Plastic</h6>
-                                            <div className="px-3 py-1">
-                                                <div className="form-row">
-                                                    <div className="col-sm-6"><CheckInput label="PLA" onClick={this.addFilter} /></div>
-                                                    <div className="col-sm-6"><CheckInput label="Resin" onClick={this.addFilter} /></div>
+                                            <form className="">
+                                                <a data-toggle="collapse" href="#advanceFilters" role="button" aria-expanded="false" aria-controls="advanceFilters">
+                                                    <strong className="text-secondary px-3">Advanced Filter <FaIcon icon={faAngleDown} /></strong>
+                                                </a>
+                                                <div class="collapse multi-collapse" id="advanceFilters">
+                                                    <h6 className="dropdown-header">Plastic</h6>
+                                                    <div className="px-3 py-1">
+                                                        <div className="form-row">
+                                                            <div className="col-sm-6"><CheckInput label="PLA" onClick={this.addFilter} /></div>
+                                                            <div className="col-sm-6"><CheckInput label="Resin" onClick={this.addFilter} /></div>
+                                                        </div>
+                                                        <div className="form-row">
+                                                            <div className="col-sm-6"><CheckInput label="PETG" onClick={this.addFilter} /></div>
+                                                            <div className="col-sm-6"><CheckInput label="ASA" onClick={this.addFilter} /></div>
+                                                        </div>
+                                                        <div className="form-row">
+                                                            <div className="col-sm-6"><CheckInput label="ABS" onClick={this.addFilter} /></div>
+                                                            <div className="col-sm-6"><CheckInput label="Nylon" onClick={this.addFilter} /></div>
+                                                        </div>
+                                                        <div className="form-row">
+                                                            <div className="col-sm-6"><CheckInput label="TPU" onClick={this.addFilter} /></div>
+                                                            <div className="col-sm-6"><CheckInput label="PEI" onClick={this.addFilter} /></div>
+                                                        </div>
+                                                    </div>
+                                                    <h6 className="dropdown-header">Metals</h6>
+                                                    <div className="px-3 py-1">
+                                                        <div className="form-row">
+                                                            <div className="col-sm-6"><CheckInput label="Steel" onClick={this.addFilter} /></div>
+                                                            <div className="col-sm-6"><CheckInput label="Aluminium" onClick={this.addFilter} /></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div className="form-row">
-                                                    <div className="col-sm-6"><CheckInput label="PETG" onClick={this.addFilter} /></div>
-                                                    <div className="col-sm-6"><CheckInput label="ASA" onClick={this.addFilter} /></div>
-                                                </div>
-                                                <div className="form-row">
-                                                    <div className="col-sm-6"><CheckInput label="ABS" onClick={this.addFilter} /></div>
-                                                    <div className="col-sm-6"><CheckInput label="Nylon" onClick={this.addFilter} /></div>
-                                                </div>
-                                                <div className="form-row">
-                                                    <div className="col-sm-6"><CheckInput label="TPU" onClick={this.addFilter} /></div>
-                                                    <div className="col-sm-6"><CheckInput label="PEI" onClick={this.addFilter} /></div>
-                                                </div>
-                                            </div>
-                                            <h6 className="dropdown-header">Metals</h6>
-                                            <div className="px-3 py-1">
-                                                <div className="form-row">
-                                                    <div className="col-sm-6"><CheckInput label="Steel" onClick={this.addFilter} /></div>
-                                                    <div className="col-sm-6"><CheckInput label="Aluminium" onClick={this.addFilter} /></div>
-                                                </div>
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                     {/* Language */}
