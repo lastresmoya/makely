@@ -32,7 +32,7 @@ function LandingPage (props) {
                 </div>
             </header>
 
-            <section className="py-5 bg-dark text-white text-center ">
+            <section className="py-5 bg-dark text-white text-center" id="works">
                 <div className="container py-4">
                     <h2 className="h2 pb-2 d-flex flex-column align-items-center">
                         <span className="text-danger font-weight-bold">How</span>
