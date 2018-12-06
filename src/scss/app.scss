@@ -150,6 +150,11 @@ footer {
         right: 2%;
         top: 6%;
     }
+
+    img {
+        height: 130px;
+        width: 130px;
+    }
 }
 
 .bg-light-secondary {
@@ -196,6 +201,10 @@ section {
         }
         .btn-heart {
             position: initial;
+        }
+        img {
+            height: initial;
+            width: initial;
         }
     } 
 }
