@@ -61,11 +61,11 @@ function LandingPage (props) {
             </section>
             <div className="bg-curve bg-curve-bottom"></div>
 
-            <section className="pt-5 bg-detail bg-detail-left">
+            <section className="pt-0 bg-detail bg-detail-left">
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-9 m-auto">
-                            <div className="row py-4 align-items-center">
+                            <div className="row pt-0 pb-4 align-items-center">
                                 <div className="col-sm-7">
                                     <p className="font-weight-bold">Makely is platform for those who want to create things but never knew how to 3D print or 3D model. Let one of our experienced community creators take care of all intricacies and details surrounding the process. All you need to do is describe your idea to them!</p>
                                 </div>
