@@ -15,10 +15,28 @@
 
 header {
     height: 60vh;
-    background-image: url('../images/header-bg.png');
-    background-size: cover;
-    background-attachment: fixed;
+    // background-image: url('../images/header-bg.png');
+    // background-size: cover;
+    // background-attachment: fixed;
     @extend .py-4;
+    overflow: hidden;
+
+    video {
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        width: auto;
+    }
+    .container {
+        z-index: 2;
+    }
+    .overlay {
+        background-color: rgba(0, 0, 0, .1);
+        left: 0;
+        z-index: 1;
+    }
 }
 
 
@@ -193,6 +211,12 @@ section {
 }
 
 @media screen and (min-width: 768px) {
+    header {
+        video {
+            height: auto;
+            width: 100%;
+        }
+    }
     .creator-list__item {
         .btn-contact {
             bottom: initial;

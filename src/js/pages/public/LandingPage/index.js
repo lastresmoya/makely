@@ -20,7 +20,22 @@ import CTA from "Components/CTA";
 function LandingPage (props) {
     return(
         <div>
-            <header className="d-flex align-items-center bg-dark px-sm-5">
+            <header className="d-flex align-items-center bg-dark px-sm-5 position-relative">
+                <div className="overlay position-absolute w-100 h-100"></div>
+                <video autoplay="autoplay" loop="loop" mute="mute" className="position-absolute">
+                    <source
+                        type="video/mp4"
+                        src="/images/landing_video.mp4">
+                    </source>
+                    <source
+                        type="video/webm"
+                        src="/images/landing_video.webm">
+                    </source>
+                    <source
+                        type="video/ogv"
+                        src="/images/landing_video.ogv">
+                    </source>
+                </video>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6">
