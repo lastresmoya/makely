@@ -39,6 +39,9 @@ header {
     }
 }
 
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
 
 .btn {
     &.btn-circle {
@@ -73,6 +76,12 @@ header {
 }
 footer {
     background-color: #181D2B;
+}
+
+.btn-s {
+    &:hover {
+        color: white !important;
+        background-color: $danger;}
 }
 
 .bg-curve {
@@ -189,7 +198,25 @@ footer {
     height: 30rem;
     overflow-y: auto;
 }
-
+.message-job {
+    .btn-cancel--custom {
+        color:gray !important;
+        &:hover {
+            background-color: $danger;
+            border: 1px solid $danger;
+            color: white !important;
+        }
+    }
+}
+.ongoing-jobs {
+    ul {
+        height: 20rem;
+        overflow-y: auto;
+        div.list-group-item {
+            min-height: 80px;
+        }
+    }
+}
 .no-underline {
     &:hover {
         text-decoration: none;
