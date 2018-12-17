@@ -29,8 +29,8 @@ function MessagesPage (props) {
                                 <li className="list-group-item p-0">
                                     <div className="input-group">
                                         <input type="text" className="form-control border-0 px-3 py-2" placeholder="Search" aria-label="Search" aria-describedby="search-addon"/>
-                                        <div className="input-group-append ">
-                                            <span className="input-group-text border-0 bg-transparent py-2 pr-4" id="search-addon"><FaIcon icon={faSearch}/></span>
+                                        <div className="input-group-append">
+                                            <button className="btn btn-outline-secondary border-0 bg-transparent py-2 pr-4" type="button" id="search-addon"><FaIcon icon={faSearch} /></button>
                                         </div>
                                     </div>
                                 </li>
