@@ -20,7 +20,7 @@ import CTA from "Components/CTA";
 function LandingPage (props) {
     return(
         <div>
-            <header className="d-flex align-items-center bg-dark px-sm-5">
+            <header className="d-flex align-items-center bg-dark px-sm-5 py-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6">

@@ -14,7 +14,7 @@
 @import '../../node_modules/aos/dist/aos.css';
 
 header {
-    height: 60vh;
+    min-height: 60vh;
     background-image: url('../images/header-bg.png');
     background-size: cover;
     background-attachment: fixed;
@@ -159,6 +159,9 @@ footer {
 
 .bg-light-secondary {
     background-color: lighten($secondary,32%);
+}
+.btn-outline-secondary {
+    &:hover {color: theme-color("secondary");}
 }
 .bg-light-danger {
     background-color: #EED6D6;
