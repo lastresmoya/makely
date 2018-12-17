@@ -79,7 +79,9 @@ footer {
 }
 
 .btn-s {
-    &:hover {color: white !important; background-color: $danger;}
+    &:hover {
+        color: white !important;
+        background-color: $danger;}
 }
 
 .bg-curve {
