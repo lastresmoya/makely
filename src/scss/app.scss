@@ -178,6 +178,9 @@ footer {
 .bg-light-secondary {
     background-color: lighten($secondary,32%);
 }
+.btn-outline-secondary {
+    &:hover {color: theme-color("secondary");}
+}
 .bg-light-danger {
     background-color: #EED6D6;
 }

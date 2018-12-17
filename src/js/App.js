@@ -26,6 +26,7 @@ import SignupPage from "./pages/public/SignupPage";
 // Logged Routes
 import MessagesPage from "./pages/private/Profile/MessagesPage";
 import MyJobsPage from "./pages/private/Profile/MyJobsPage";
+import ContactUserPage from "./pages/private/Profile/ContactUserPage";
 
 // Components
 import Main from "Components/Main";
@@ -56,6 +57,7 @@ class AppContainer extends Component {
                     {/* Profile Routes */}
                     <Route exact path='/profile/messages' component={MessagesPage} />
                     <Route exact path='/profile/my-jobs' component={MyJobsPage} />
+                    <Route exact path='/profile/contact' component={ContactUserPage} />
 
                     {/* <Route path="/clinician" render={() => <Dashboard {...{ currentDash: 'clinician' }} />} />
                     <Route path="/doctor" render={() => <Dashboard {...{ currentDash: 'doctor' }} />} /> */}

@@ -22,7 +22,7 @@ function LandingPage (props) {
         <div>
             <header className="d-flex align-items-center bg-dark px-sm-5 position-relative">
                 <div className="overlay position-absolute w-100 h-100"></div>
-                <video autoplay="autoplay" loop="loop" mute="mute" className="position-absolute">
+                <video autoPlay="autoplay" loop="loop" mute="mute" className="position-absolute">
                     <source
                         type="video/mp4"
                         src="/images/landing_video.mp4">

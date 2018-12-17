@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "Images/logo-makely.png";
 
 function Footer(props) {
@@ -14,7 +15,7 @@ function Footer(props) {
                     </ul>
                     <ul className="list-unstyled mx-sm-5">
                         <li className="mb-4">SUPPORT</li>
-                        <li><a className="no-underline" href="">FAQs</a></li>
+                        <li><Link className="no-underline" to={"/faqs"}>FAQs</Link></li>
                         <li><a className="no-underline" href="">Contact Us</a></li>
                     </ul>
                     <ul className="list-unstyled">
