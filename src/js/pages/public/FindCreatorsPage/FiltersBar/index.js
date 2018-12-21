@@ -82,7 +82,7 @@ class FiltersBar extends React.Component {
                         <a className="px-3 font-weight-bold" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                             Filters <FaIcon icon={faAngleDown} />
                         </a>
-                        <div class="collapse" id="collapseExample">
+                        <div className="collapse" id="collapseExample">
                             <div className="card-body py-2">
                                 <div className="container">
                                     <div className="d-md-flex">
@@ -133,7 +133,7 @@ class FiltersBar extends React.Component {
 
                                             {/* Materials */}
                                             <div className="dropdown">
-                                                <a className="btn btn-light dropdown-toggle text-muted" href="#" role="button" id="ddMaterials" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a className="btn btn-light dropdown-toggle text-muted p-2" href="#" role="button" id="ddMaterials" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     Materials  <FaIcon icon={faAngleDown} />
                                                 </a>
 
@@ -231,7 +231,7 @@ class FiltersBar extends React.Component {
 
                     {/* MoreFilters */}
                     <div className="card">
-                        <div className="card-body py-2">
+                        <div className="card-body py-2 text-uppercase">
                             <div className="container">
                                 <div className="row d-flex align-items-center">
                                     <div className="col ml-3">
@@ -243,7 +243,7 @@ class FiltersBar extends React.Component {
                                                         key={i}
                                                         onClick={() => this.removeFilter('currentFilters', `${filter}`)}
                                                     >
-                                                        {filter} <FaIcon icon={faTimes} />
+                                                        {filter.toUpperCase()} <FaIcon icon={faTimes} />
                                                     </button>
                                                 )
                                             })
@@ -266,7 +266,7 @@ class FiltersBar extends React.Component {
                                     <div className="btn-group">
                                         {/* Location */}
                                         <div className="dropdown">
-                                            <a className="btn btn-light dropdown-toggle text-muted" href="#" role="button" id="ddLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <a className="btn btn-light p-2 dropdown-toggle text-muted" href="#" role="button" id="ddLocation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Location  <FaIcon icon={faAngleDown} />
                                             </a>
 
@@ -295,7 +295,7 @@ class FiltersBar extends React.Component {
 
                                         {/* Services */}
                                         <div className="dropdown">
-                                            <a className="btn btn-light dropdown-toggle text-muted" href="#" role="button" id="ddServices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <a className="btn btn-light p-2 dropdown-toggle text-muted" href="#" role="button" id="ddServices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Services  <FaIcon icon={faAngleDown} />
                                             </a>
 
@@ -310,7 +310,7 @@ class FiltersBar extends React.Component {
 
                                         {/* Materials */}
                                         <div className="dropdown">
-                                            <a className="btn btn-light dropdown-toggle text-muted" href="#" role="button" id="ddMaterials" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <a className="btn btn-light p-2 dropdown-toggle text-muted" href="#" role="button" id="ddMaterials" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Materials  <FaIcon icon={faAngleDown} />
                                             </a>
 
@@ -357,7 +357,7 @@ class FiltersBar extends React.Component {
                                         </div>
                                         {/* Language */}
                                         <div className="dropdown">
-                                            <a className="btn btn-light dropdown-toggle text-muted" href="#" role="button" id="ddLanguages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <a className="btn btn-light p-2 dropdown-toggle text-muted" href="#" role="button" id="ddLanguages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Language  <FaIcon icon={faAngleDown} />
                                             </a>
 
@@ -386,7 +386,7 @@ class FiltersBar extends React.Component {
 
                                         {/* Projects */}
                                         <div className="dropdown">
-                                            <a className="btn btn-light dropdown-toggle text-muted" href="#" role="button" id="ddProjects" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <a className="btn btn-light p-2 dropdown-toggle text-muted" href="#" role="button" id="ddProjects" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Projects  <FaIcon icon={faAngleDown} />
                                             </a>
 
@@ -412,13 +412,14 @@ class FiltersBar extends React.Component {
                                     <div className="col ml-3">
                                         {this.state.selectedFilters &&
                                             this.state.selectedFilters.map((filter, i) => {
+                                                let currentFilter = filter.toUpperCase();
                                                 return (
                                                     <button
                                                         className="btn btn-light btn-sm mr-2 font-weight-bold"
                                                         key={i}
                                                         onClick={() => this.removeFilter('currentFilters', `${filter}`)}
                                                     >
-                                                        {filter} <FaIcon icon={faTimes} />
+                                                        {currentFilter} <FaIcon icon={faTimes} />
                                                     </button>
                                                 )
                                             })

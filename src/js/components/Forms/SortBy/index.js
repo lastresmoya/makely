@@ -17,8 +17,7 @@ function SortBy(props) {
             </a>
 
             <div className="dropdown-menu dropdown-menu-right" aria-labelledby="ddSort">
-                <form className="py-1 px-3">
-                </form>
+                {props.children}
             </div>
         </div>
     );

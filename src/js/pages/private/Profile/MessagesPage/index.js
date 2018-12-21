@@ -27,10 +27,12 @@ function MessagesPage (props) {
                             </div>
                             <ul className="list-group list-group-flush">
                                 <li className="list-group-item p-0">
-                                    <div className="input-group input-group--messages">
+                                    <div className="input-group input-group--messages search">
                                         <input type="text" className="form-control border-0 px-3 py-2" placeholder="Search" aria-label="Search" aria-describedby="search-addon"/>
-                                        <div className="input-group-append">
-                                            <button className="btn btn-outline-secondary border-0 bg-transparent py-2 pr-4" type="button" id="search-addon"><FaIcon icon={faSearch} /></button>
+                                        <div className="input-group-append position-relative">
+                                            <button className="btn btn-outline-secondary border-0 bg-transparent p-0 position-absolute" type="button" id="search-addon">
+                                                <FaIcon icon={faSearch} />
+                                            </button>
                                         </div>
                                     </div>
                                 </li>

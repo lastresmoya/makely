@@ -18,7 +18,7 @@ function JobCard({status,size}) {
     return (
         <div className="card w-100 mx-sm-2 mb-5 shadow-sm">
             
-            <div className="card-img-wrapper">
+            <div className="card-img-wrapper pt-1">
                 <div className="upper d-flex justify-content-end">
                     <span className="h6"><span className="badge badge-light text-muted px-2 py-1">01/01/2018</span></span>
                 </div>
