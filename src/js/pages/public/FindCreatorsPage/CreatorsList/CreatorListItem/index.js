@@ -31,10 +31,10 @@ class CreatorListItem extends React.Component {
                     <img className="w-md-50 mx-auto mx-md-0  d-block d-md-line mt-3 mt-md-0 mb-4 mb-md-0" src={creatorThumb} alt="" />
                     <div className="px-3 w-100 position-relative">
                         <div className="d-md-flex align-items-center justify-content-start pt-0 pb-1">
-                            <span className="font-weight-bold h4 mr-3 mb-0">John Brewer</span>
+                            <span className="font-weight-bold h4 mr-2 mb-0">John Brewer</span>
                             <FaIcon icon={faThumbsUp} />
                             <small className="font-weight-bold text-muted ml-2 font-weight-bold">98%</small>
-                            <span className="text-muted ml-2 ml-md-5"><FaIcon icon={faTrophy} /></span>
+                            <span className="text-muted ml-2"><FaIcon icon={faTrophy} /></span>
                         </div>
                         <p><span className="text-danger"><FaIcon icon={faMapMarkerAlt} /></span> <span className="text-muted font-weight-bold">London, United Kingdom</span></p>
                         <div className="badges-container mb-4 mb-md-0">

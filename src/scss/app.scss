@@ -177,6 +177,10 @@ footer {
         position: absolute;
         right: 2%;
         top: 6%;
+
+        &:focus {
+            box-shadow: none;
+        }
     }
 
     img {
@@ -212,7 +216,7 @@ footer {
     .btn-cancel--custom {
         color:gray !important;
         &:hover {
-            background-color: $danger;
+            background-color: red;
             border: 1px solid $danger;
             color: white !important;
         }
@@ -224,6 +228,26 @@ footer {
         overflow-y: auto;
         div.list-group-item {
             min-height: 80px;
+        }
+    }
+    .input-group--messages {
+       input:focus {
+           box-shadow: none !important;
+       }
+    }
+    .job-list {
+        cursor: pointer;
+    }
+    .search {
+        .input-group-append {
+            width: 55px;
+            button {
+                left: 50%;
+                transform: translateX(-50%);
+                &:focus {
+                    box-shadow: none;
+                }
+            }
         }
     }
 }

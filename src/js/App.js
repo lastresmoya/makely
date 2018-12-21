@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import AOS from 'aos';
-
-// import { HashRouter as Router, Route } from 'react-router-dom';
 
 import {
     activateGeod,
@@ -45,8 +43,7 @@ class AppContainer extends Component {
 
     render() {
         return (
-            <BrowserRouter>
-                <Switch>
+            <Router>
                     <Main>
                         <Route component={ScrollToTop} />
                         <Route exact path='/' component={LandingPage} />
@@ -76,8 +73,8 @@ class AppContainer extends Component {
                         </button>
                     } */}
                     </Main>
-                </Switch>
-            </BrowserRouter>
+                {/* </Switch> */}
+            </Router>
         );
     }
 }

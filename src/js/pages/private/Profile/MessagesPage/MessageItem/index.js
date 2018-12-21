@@ -3,7 +3,7 @@ import avatar from "./assets/avatar-alice.png";
 
 function MessageItem(props) {
     return (
-        <div className="list-group-item d-flex align-items-start  list-group-item-action px-2">
+        <div className="list-group-item d-flex align-items-start  list-group-item-action px-2 job-list">
             <img src={avatar} alt=""/>
             <div className="w-100 ml-2">
                 <div className="d-flex justify-content-between align-items-center text-muted font-weight-bold">

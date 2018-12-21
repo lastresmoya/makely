@@ -11,8 +11,8 @@ function MessageJob(props) {
                 <span className="h5"><span className="text-uppercase badge badge-warning">NEGOTIATION</span></span>
             </div>
             <div>
-                <button className="btn btn-secondary px-3 rounded-lg mr-3">ACCEPT</button>
-                <button className="btn btn-outline-secondary btn-cancel--custom px-3 rounded-lg"><span >CANCEL</span></button>
+                <button className="btn btn-secondary btn-sm py-2 px-3 rounded-lg mr-3">ACCEPT</button>
+                <button className="btn btn-outline-secondary btn-sm py-2 btn-cancel--custom px-3 rounded-lg"><span >CANCEL</span></button>
             </div>
         </div>
     );
