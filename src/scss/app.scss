@@ -15,9 +15,10 @@
 
 header {
     height: 60vh;
-    // background-image: url('../images/header-bg.png');
-    // background-size: cover;
-    // background-attachment: fixed;
+    background-image: url('../images/header-bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
     @extend .py-4;
     overflow: hidden;
 
@@ -184,6 +185,15 @@ footer {
     }
 }
 
+.carousel {
+    .carousel-control-prev,
+    .carousel-control-next {
+        .btn-circle {
+            transform: translateY(-50%);
+        }
+    }
+}
+
 .bg-light-secondary {
     background-color: lighten($secondary,32%);
 }
@@ -261,4 +271,11 @@ section {
             width: initial;
         }
     } 
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+       background: none;
+        background-attachment: fixed;
+    }
 }

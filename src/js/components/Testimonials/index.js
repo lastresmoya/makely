@@ -26,9 +26,9 @@ class Testimonials extends React.Component {
             <div>
                 <div className="row">
                     <div className="col">
-                        <h2 className="h3 pb-2 d-flex flex-column align-items-center justify-content-center">
-                            <span className="text-info font-weight-bold">What</span>
-                            <span className="display-4 font-weight-bold">people say?</span>
+                        <h2 className="h4 pb-2 d-flex flex-column align-items-center">
+                            <span className="display-4 text-info font-weight-bold">Testimonials</span>
+                            <span className="font-weight-bold">What others are saying</span>
                         </h2>
                     </div>
                 </div>
@@ -61,15 +61,15 @@ class Testimonials extends React.Component {
                         </div>
                     </div>
 
-                    <a className="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
+                    <a className="carousel-control-prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true">
-                            <button className="btn btn-circle btn-info"><FaIcon icon={faArrowLeft} /></button>
+                            <button className="btn btn-circle btn-info position-absolutw" href="#testimonialsCarousel" role="button" data-slide="prev"><FaIcon icon={faArrowLeft} /></button>
                         </span>
                         <span className="sr-only">Previous</span>
                     </a>
-                    <a className="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
+                    <a className="carousel-control-next">
                         <span className="carousel-control-next-icon" aria-hidden="true">
-                            <button className="btn btn-circle btn-info"><FaIcon icon={faArrowRight} /></button>
+                            <button className="btn btn-circle btn-info position-absolute" href="#testimonialsCarousel" role="button" data-slide="next"><FaIcon icon={faArrowRight} /></button>
                         </span>
                         <span className="sr-only">Next</span>
                     </a>
