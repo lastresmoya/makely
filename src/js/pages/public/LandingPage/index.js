@@ -22,7 +22,7 @@ function LandingPage (props) {
         <div>
             <header className="d-flex align-items-center bg-dark px-sm-5 position-relative">
                 <div className="overlay position-absolute w-100 h-100"></div>
-                <video autoPlay="autoplay" loop="loop" mute="mute" className="position-absolute">
+                <video autoPlay="autoplay" loop="loop" mute="mute" className="position-absolute d-none d-lg-block">
                     <source
                         type="video/mp4"
                         src="/images/landing_video.mp4">
@@ -39,7 +39,7 @@ function LandingPage (props) {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-6">
-                            <h1 className="text-white display-4 font-weight-bold">Find 3D printers online</h1>
+                            <h1 className="text-white display-4 font-weight-bold">Find 3D printing freelancers</h1>
                             <p className="lead text-white py-4 font-weight-bold">With Makely you can find anyone with a 3D printer to create your idea. The only limit is your imagination!</p>
                             <BtnPrimary content="GET STARTED"/>
                         </div>
@@ -200,9 +200,9 @@ function LandingPage (props) {
                     {/* Explore */}
                     <div className="row py-5 text-center">   
                         <div className="col">
-                            <h2 className="h3 pb-2 d-flex flex-column align-items-center">
-                                <span className="text-danger font-weight-bold">Explore</span>
-                                <span className="display-4 text-white font-weight-bold">all locations</span>
+                            <h2 className="h4 pb-2 d-flex flex-column align-items-center">
+                                <span className="display-4 text-white font-weight-bold text-danger">Explore</span>
+                                <span className="text-white font-weight-bold">all locations</span>
                             </h2>
                             <img src={map} alt="" className="img-fluid pt-4 pb-3"/>
 

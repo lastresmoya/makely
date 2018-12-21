@@ -1,4 +1,5 @@
 import React from "react";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from "react-router-dom";
 import logo from "Images/logo-makely.svg";
 
@@ -14,7 +15,7 @@ function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <a className="nav-link" href="/#works">HOW IT WORKS <span className="sr-only">(current)</span></a>
+                            <AnchorLink href='#works' className="nav-link">HOW IT WORKS <span className="sr-only">(current)</span></AnchorLink>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to={"/about"}>ABOUT US</Link>

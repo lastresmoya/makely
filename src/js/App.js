@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import AOS from 'aos';
+
+// import { HashRouter as Router, Route } from 'react-router-dom';
 
 import {
     activateGeod,
@@ -43,27 +45,28 @@ class AppContainer extends Component {
 
     render() {
         return (
-            <Router>
-                <Main>
-                    <Route component={ScrollToTop} />
-                    <Route exact path='/' component={LandingPage} />
-                    <Route exact path='/find-creators' component={FindCreatorsPage} />
-                    <Route exact path='/about' component={AboutPage} />
-                    <Route exact path='/faqs' component={FAQsPage} />
-                    <Route exact path='/contact' component={ContactPage} />
-                    <Route exact path='/login' component={LoginPage} />
-                    <Route exact path='/signup' component={SignupPage} />
+            <BrowserRouter>
+                <Switch>
+                    <Main>
+                        <Route component={ScrollToTop} />
+                        <Route exact path='/' component={LandingPage} />
+                        <Route exact path='/find-creators' component={FindCreatorsPage} />
+                        <Route exact path='/about' component={AboutPage} />
+                        <Route exact path='/faqs' component={FAQsPage} />
+                        <Route exact path='/contact' component={ContactPage} />
+                        <Route exact path='/login' component={LoginPage} />
+                        <Route exact path='/signup' component={SignupPage} />
 
-                    {/* Profile Routes */}
-                    <Route exact path='/profile/messages' component={MessagesPage} />
-                    <Route exact path='/profile/my-jobs' component={MyJobsPage} />
-                    <Route exact path='/profile/contact' component={ContactUserPage} />
+                        {/* Profile Routes */}
+                        <Route exact path='/profile/messages' component={MessagesPage} />
+                        <Route exact path='/profile/my-jobs' component={MyJobsPage} />
+                        <Route exact path='/profile/contact' component={ContactUserPage} />
 
-                    {/* <Route path="/clinician" render={() => <Dashboard {...{ currentDash: 'clinician' }} />} />
+                        {/* <Route path="/clinician" render={() => <Dashboard {...{ currentDash: 'clinician' }} />} />
                     <Route path="/doctor" render={() => <Dashboard {...{ currentDash: 'doctor' }} />} /> */}
 
-                    {/* Test Redux */}
-                    {/* {this.props.geod.title || 'hello world'}
+                        {/* Test Redux */}
+                        {/* {this.props.geod.title || 'hello world'}
                     {this.props.geod.title ?
                         <button onClick={this.props.closeGeod}>
                             Exit Geod
@@ -72,8 +75,9 @@ class AppContainer extends Component {
                             Click Me!
                         </button>
                     } */}
-                </Main>
-            </Router>
+                    </Main>
+                </Switch>
+            </BrowserRouter>
         );
     }
 }
