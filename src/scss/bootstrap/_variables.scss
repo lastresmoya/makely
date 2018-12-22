@@ -334,7 +334,8 @@ $input-btn-padding-x:         1rem !default;
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:       .2rem !default;
-$input-btn-focus-color:       rgba(theme-color("secondary"), .25) !default;
+// $input-btn-focus-color:       rgba(theme-color("secondary"), .25) !default;
+$input-btn-focus-color:       transparent !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
 $input-btn-padding-y-sm:      .25rem !default;
@@ -446,7 +447,8 @@ $form-check-inline-input-margin-x:      .3125rem !default;
 
 $form-group-margin-bottom:              1rem !default;
 
-$input-group-addon-color:               $input-color !default;
+// $input-group-addon-color:               $input-color !default;
+$input-group-addon-color:               $gray-600 !default;
 $input-group-addon-bg:                  $gray-200 !default;
 $input-group-addon-border-color:        $input-border-color !default;
 
