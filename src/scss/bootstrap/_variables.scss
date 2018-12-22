@@ -151,7 +151,8 @@ $body-color:                $gray-900 !default;
 $link-color:                theme-color("secondary") !default;
 $link-decoration:           none !default;
 $link-hover-color:          darken($link-color, 15%) !default;
-$link-hover-decoration:     underline !default;
+// $link-hover-decoration:     underline !default;
+$link-hover-decoration:     none !default;
 
 // Paragraphs
 //

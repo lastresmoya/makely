@@ -265,12 +265,15 @@ footer {
 section {
     &:nth-child(1n) {
         .divider {background-color: theme-color("secondary");}
+        .faq-icon {color: theme-color("secondary");}
     }
     &:nth-child(2n) {
         .divider {background-color: theme-color("primary");}
+        .faq-icon {color: theme-color("primary");}
     }
     &:nth-child(3n) {
         .divider {background-color: theme-color("danger");}
+        .faq-icon {color: theme-color("danger");}
     }
 }
 
