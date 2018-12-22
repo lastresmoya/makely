@@ -24,6 +24,7 @@ import SignupPage from "./pages/public/SignupPage";
 
 
 // Logged Routes
+import ProfilePage from "./pages/private/Profile/ProfileGeneral";
 import MessagesPage from "./pages/private/Profile/MessagesPage";
 import MyJobsPage from "./pages/private/Profile/MyJobsPage";
 import ContactUserPage from "./pages/private/Profile/ContactUserPage";
@@ -55,6 +56,7 @@ class AppContainer extends Component {
                         <Route exact path='/signup' component={SignupPage} />
 
                         {/* Profile Routes */}
+                        <Route exact path='/profile/general' component={ProfilePage} />
                         <Route exact path='/profile/messages' component={MessagesPage} />
                         <Route exact path='/profile/my-jobs' component={MyJobsPage} />
                         <Route exact path='/profile/contact' component={ContactUserPage} />
