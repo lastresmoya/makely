@@ -21,10 +21,10 @@ import FAQsPage from "./pages/public/FAQsPage";
 import ContactPage from "./pages/public/ContactPage";
 import LoginPage from "./pages/public/LoginPage";
 import SignupPage from "./pages/public/SignupPage";
-
+import PublicProfilePage from "./pages/public/PublicProfilePage";
 
 // Logged Routes
-import ProfilePage from "./pages/private/Profile/ProfileGeneral";
+import PrivateProfilePage from "./pages/private/Profile/PrivateProfilePage";
 import MessagesPage from "./pages/private/Profile/MessagesPage";
 import MyJobsPage from "./pages/private/Profile/MyJobsPage";
 import ContactUserPage from "./pages/private/Profile/ContactUserPage";
@@ -54,9 +54,9 @@ class AppContainer extends Component {
                         <Route exact path='/contact' component={ContactPage} />
                         <Route exact path='/login' component={LoginPage} />
                         <Route exact path='/signup' component={SignupPage} />
-
+                        <Route exact path='/profile/public' component={PublicProfilePage} />
                         {/* Profile Routes */}
-                        <Route exact path='/profile/general' component={ProfilePage} />
+                        <Route exact path='/profile/general' component={PrivateProfilePage} />
                         <Route exact path='/profile/messages' component={MessagesPage} />
                         <Route exact path='/profile/my-jobs' component={MyJobsPage} />
                         <Route exact path='/profile/contact' component={ContactUserPage} />
