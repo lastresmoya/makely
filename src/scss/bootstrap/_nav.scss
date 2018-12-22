@@ -44,8 +44,10 @@
     border: $nav-tabs-border-width solid transparent;
     @include border-top-radius($nav-tabs-border-radius);
 
+    color: $body-color;
+
     @include hover-focus {
-      border-color: $nav-tabs-link-hover-border-color;
+    //   border-color: $nav-tabs-link-hover-border-color;
     }
 
     &.disabled {
