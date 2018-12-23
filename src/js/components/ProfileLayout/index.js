@@ -4,6 +4,7 @@ import PageTitle from "Components/Type/PageTitle";
 import CardSm from "Components/Cards/CardSm";
 import UserInfo from "Components/User/UserInfo";
 import PortfolioandReviews from "./PortfolioandReviews";
+import Projects from "./Projects";
 
 
 class ProfileLayout extends React.Component {
@@ -18,29 +19,41 @@ class ProfileLayout extends React.Component {
     }
     
     render(){
-        const {user} = this.props;
+        const {isLogged} = this.props;
         const {userName, currentView} = this.state;
-        const userTitle = () => {
-            if (user === 'logged') { return `Your Profile`}
+        const renderTitle = () => {
+            if (isLogged) { return `Your Profile`}
             else return `${userName} Profile`;
+        }
+        const renderPortfolio = () => {
+            if((isLogged&&currentView==='creator')|| !isLogged){
+                return <PortfolioandReviews/>
+            }
+        }
+        const renderProjects = () => {
+            if(isLogged && currentView==='client') return <Projects/>
+        }
+        const renderMessageCount = () => {
+            // if(isLogged)
         }
         return (
             <React.Fragment>
                 {/* Breadcrumbs */}
-                {user === 'logged' && <Breadcrumbs current={userName} />}
+                {isLogged && <Breadcrumbs current={userName} />}
                 {/* Page Title */}
-                <PageTitle title={userTitle()}/>
+                <PageTitle title={renderTitle()}/>
 
                 <section className="py-4 mb-5">
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-4">
                                 <CardSm>
-                                    <UserInfo user={user} userInfo={this.state}/>
+                                    <UserInfo isLogged={isLogged} userInfo={this.state}/>
+                                    {renderMessageCount()}
                                 </CardSm>
                             </div>
                             <div className="col-sm-8">
-                                {user === 'logged' &&
+                                {isLogged &&
                                     <React.Fragment>
                                         <div className="card shadow-sm border-0 mb-3">
                                             <ul className="nav nav-tabs mx-3">
@@ -52,24 +65,10 @@ class ProfileLayout extends React.Component {
                                                 </li>
                                             </ul>
                                         </div>
-                                        
-                                        
-                                        
-                                        {currentView === 'client' &&
-                                            <React.Fragment>
-                                                <CardSm>
-                                                        Active Projects
-                                                </CardSm>
-                                                <CardSm>
-                                                        Completed Projects
-                                                </CardSm>
-                                            </React.Fragment>
-                                        }
-                                        {currentView === 'creator' && <PortfolioandReviews/>} 
-
                                     </React.Fragment>
                                 }
-                                { user === 'public' && <PortfolioandReviews/>}
+                                {renderProjects()}
+                                {renderPortfolio()}
 
                             </div>
                         </div>

@@ -4,7 +4,7 @@ import ProfileLayout from "Components/ProfileLayout"
 class PrivateProfilePage extends React.Component {
     render(){
         return (
-            <ProfileLayout user="logged"/>
+            <ProfileLayout isLogged={true}/>
         );
     }
 }
