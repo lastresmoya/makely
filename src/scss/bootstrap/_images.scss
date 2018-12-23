@@ -16,7 +16,8 @@
   background-color: $thumbnail-bg;
   border: $thumbnail-border-width solid $thumbnail-border-color;
   @include border-radius($thumbnail-border-radius);
-  @include box-shadow($thumbnail-box-shadow);
+//   @include box-shadow($thumbnail-box-shadow);
+    @extend .shadow-md;
 
   // Keep them at most 100% wide
   @include img-fluid;

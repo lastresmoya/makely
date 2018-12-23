@@ -137,9 +137,8 @@ footer {
     &.btn-light {color: #7C706E;}
 }
 
-.shadow-sm {
-    box-shadow: 0 0 4px rgba(0,0,0,.15);
-}
+.shadow-sm {box-shadow: 0 0 4px rgba(0,0,0,.15);}
+.shadow-md {box-shadow: 0 2px 4px rgba(0,0,0,.15);}
 
 .card-img-wrapper {
     position: relative;
@@ -304,5 +303,11 @@ section {
     header {
        background: none;
         background-attachment: fixed;
+    }
+}
+
+.card {
+    &.bg-light {
+        .card-header { border-bottom: 2px solid $white };
     }
 }
