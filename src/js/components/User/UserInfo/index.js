@@ -1,5 +1,6 @@
 import React from "react";
 import Avatar from "./assets/user-avatar-lg.png";
+import EditProfileModal from "Components/User/EditProfileModal";
 
 function UserInfo (props) {
     const {userName, location, bio, currentView} = props.userInfo;
@@ -12,15 +13,17 @@ function UserInfo (props) {
             {!isLogged && 
                 <React.Fragment>
                     <small className="font-weight-normal text-muted text-center">{bio}</small>
-                    <button className="btn btn-primary rounded-lg mt-3 text-white py-2">CONTACT</button>
+                    <button data-toggle="modal" data-target="#editProfileModal" className="btn btn-primary rounded-lg mt-3 text-white py-2">CONTACT</button>
                 </React.Fragment>
             }
             {isLogged && 
                 <React.Fragment>
                 {currentView === 'creator' && <small className="font-weight-normal text-muted text-center">{bio}</small>}
-                    <button className="btn btn-light rounded-lg mt-3 py-2 ">EDIT PROFILE</button>
+                    <button data-toggle="modal" data-target="#editProfileModal" className="btn btn-light rounded-lg mt-3 py-2 ">EDIT PROFILE</button>
                 </React.Fragment>
             }
+
+            <EditProfileModal/>
         </div>
     );
 }
