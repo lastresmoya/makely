@@ -151,7 +151,8 @@ $body-color:                $gray-900 !default;
 $link-color:                theme-color("secondary") !default;
 $link-decoration:           none !default;
 $link-hover-color:          darken($link-color, 15%) !default;
-$link-hover-decoration:     underline !default;
+// $link-hover-decoration:     underline !default;
+$link-hover-decoration:     none !default;
 
 // Paragraphs
 //
@@ -276,7 +277,9 @@ $lead-font-weight:            300 !default;
 
 $small-font-size:             80% !default;
 
-$text-muted:                  $gray-600 !default;
+// $text-muted:                  $gray-600 !default;
+$text-muted:                  #7C706E !default;
+
 
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
@@ -333,7 +336,8 @@ $input-btn-padding-x:         1rem !default;
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:       .2rem !default;
-$input-btn-focus-color:       rgba(theme-color("secondary"), .25) !default;
+// $input-btn-focus-color:       rgba(theme-color("secondary"), .25) !default;
+$input-btn-focus-color:       transparent !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
 $input-btn-padding-y-sm:      .25rem !default;
@@ -405,7 +409,7 @@ $input-bg:                              $gray-100 !default;
 $input-disabled-bg:                     $gray-200 !default;
 
 $input-color:                           $gray-700 !default;
-$input-border-color:                    darken($input-bg,5%) !default;
+$input-border-color:                    darken($input-bg,10%) !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
 
@@ -445,7 +449,8 @@ $form-check-inline-input-margin-x:      .3125rem !default;
 
 $form-group-margin-bottom:              1rem !default;
 
-$input-group-addon-color:               $input-color !default;
+// $input-group-addon-color:               $input-color !default;
+$input-group-addon-color:               $gray-600 !default;
 $input-group-addon-bg:                  $gray-200 !default;
 $input-group-addon-border-color:        $input-border-color !default;
 
@@ -584,13 +589,14 @@ $nav-link-padding-y:                .5rem !default;
 $nav-link-padding-x:                1rem !default;
 $nav-link-disabled-color:           $gray-600 !default;
 
-$nav-tabs-border-color:             $gray-300 !default;
-$nav-tabs-border-width:             $border-width !default;
-$nav-tabs-border-radius:            $border-radius !default;
-$nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        $gray-700 !default;
-$nav-tabs-link-active-bg:           $body-bg !default;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
+$nav-tabs-border-color:             transparent !default;
+$nav-tabs-border-width:             $border-width*3 !default;
+// $nav-tabs-border-radius:            $border-radius !default;
+$nav-tabs-border-radius:            $border-radius*0 !default;
+$nav-tabs-link-hover-border-color:  transparent transparent $link-color !default;
+$nav-tabs-link-active-color:        $link-color !default;
+$nav-tabs-link-active-bg:           transparent !default;
+$nav-tabs-link-active-border-color: transparent transparent $nav-tabs-link-active-color !default;
 
 $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;
@@ -753,7 +759,7 @@ $modal-content-box-shadow-xs:    0 .25rem .5rem rgba($black, .5) !default;
 $modal-content-box-shadow-sm-up: 0 .5rem 1rem rgba($black, .5) !default;
 
 $modal-backdrop-bg:           $black !default;
-$modal-backdrop-opacity:      .5 !default;
+$modal-backdrop-opacity:      .8 !default;
 $modal-header-border-color:   $gray-200 !default;
 $modal-footer-border-color:   $modal-header-border-color !default;
 $modal-header-border-width:   $modal-content-border-width !default;
@@ -820,7 +826,8 @@ $list-group-action-active-bg:       $gray-200 !default;
 
 $thumbnail-padding:                 .25rem !default;
 $thumbnail-bg:                      $body-bg !default;
-$thumbnail-border-width:            $border-width !default;
+// $thumbnail-border-width:            $border-width !default;
+$thumbnail-border-width:            0px !default;
 $thumbnail-border-color:            $gray-300 !default;
 $thumbnail-border-radius:           $border-radius !default;
 $thumbnail-box-shadow:              0 1px 2px rgba($black, .075) !default;
@@ -871,10 +878,10 @@ $carousel-transition:               transform .6s ease !default;
 
 // Close
 
-$close-font-size:                   $font-size-base * 1.5 !default;
+$close-font-size:                   $font-size-base * 2 !default;
 $close-font-weight:                 $font-weight-bold !default;
-$close-color:                       $black !default;
-$close-text-shadow:                 0 1px 0 $white !default;
+$close-color:                       $text-muted !default;
+$close-text-shadow:                 none !default;
 
 // Code
 

@@ -2,7 +2,7 @@ import React from "react";
 
 function PageTitle({title}) {
     return (
-        <div className="card">
+        <div className="card border-top-0">
             <div className="card-body pb-2 pt-3">
                 <div className="container">
                     <h3 className="font-weight-bold">{title}</h3>
