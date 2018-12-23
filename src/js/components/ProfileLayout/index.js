@@ -16,7 +16,7 @@ class ProfileLayout extends React.Component {
             userName: 'Mark H.',
             location: 'London, United Kingdom',
             bio: 'Vestibulum rutrum quam vitae fringilia tinciditun. Suspendisse nex tortor urna. Ut laoreet sodales nisi, quis laculis nulla lacilis vitae.',
-            currentView: 'creator'
+            currentView: 'client'
         }
     }
     
@@ -50,6 +50,9 @@ class ProfileLayout extends React.Component {
         let renderCreatorsWorked = () => {
             if (isLogged && currentView === 'client') return <ListGroupItemMini label="Creators Worked With" value="3" />
         }
+        let renderUserDetails = () => {
+            if ((isLogged && currentView === 'creator') || !isLogged) return <UserDetails />;
+        }
         return (
             <React.Fragment>
                 {/* Breadcrumbs */}
@@ -68,7 +71,7 @@ class ProfileLayout extends React.Component {
                                     <ul className="list-group list-group-flush">
                                         {renderMessageCount()}
                                         {renderMyJobs()}
-                                        <UserDetails/>
+                                        {renderUserDetails()}
                                         <ListGroupItemMini label="Completed Jobs" value="3" />
                                         {renderClientsWorked()}
                                         {renderCreatorsWorked()}
