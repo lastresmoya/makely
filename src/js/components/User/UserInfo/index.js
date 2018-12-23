@@ -15,7 +15,12 @@ function UserInfo (props) {
                     <button className="btn btn-primary rounded-lg mt-3 text-white py-2">CONTACT</button>
                 </React.Fragment>
             }
-            {isLogged && <button className="btn btn-light rounded-lg mt-3 py-2 ">EDIT PROFILE</button>}
+            {isLogged && 
+                <React.Fragment>
+                {currentView === 'creator' && <small className="font-weight-normal text-muted text-center">{bio}</small>}
+                    <button className="btn btn-light rounded-lg mt-3 py-2 ">EDIT PROFILE</button>
+                </React.Fragment>
+            }
         </div>
     );
 }

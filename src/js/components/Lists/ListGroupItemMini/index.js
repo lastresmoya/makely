@@ -2,7 +2,7 @@ import React from "react";
 
 function ListGroupItemMini({label,value}) {
     return (
-        <div className="list-group-item d-flex justify-content-between align-items-center font-weight-bold ">
+        <div className="list-group-item d-flex justify-content-between align-items-center font-weight-bold " data-aos="fade" >
             <span className="text-muted text-uppercase">{label}</span>
             <span className="text-secondary ">{value}</span>
         </div>

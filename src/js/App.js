@@ -36,7 +36,7 @@ class AppContainer extends Component {
     componentDidMount() {
         AOS.init({
             offset: 50,
-            duration: 600,
+            duration: 300,
             easing: 'ease-in-out-sine',
             delay: 100,
         })

@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumbs from "Components/Navs/Breadcrumbs";
 import PageTitle from "Components/Type/PageTitle";
 import UserInfo from "Components/User/UserInfo";
+import UserDetails from "Components/User/UserDetails";
 import PortfolioandReviews from "./PortfolioandReviews";
 import Projects from "./Projects";
 import ListGroupItemMini from 'Components/Lists/ListGroupItemMini';
@@ -67,6 +68,7 @@ class ProfileLayout extends React.Component {
                                     <ul className="list-group list-group-flush">
                                         {renderMessageCount()}
                                         {renderMyJobs()}
+                                        <UserDetails/>
                                         <ListGroupItemMini label="Completed Jobs" value="3" />
                                         {renderClientsWorked()}
                                         {renderCreatorsWorked()}
