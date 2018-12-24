@@ -13,6 +13,7 @@
 @import './bootstrap/bootstrap';
 @import '../../node_modules/aos/dist/aos.css';
 
+
 header {
     height: 60vh;
     background-image: url('../images/header-bg.png');
@@ -22,14 +23,6 @@ header {
     @extend .py-4;
     overflow: hidden;
 
-    video {
-        height: 100%;
-        bottom: 0;
-        left: 0;
-        top: 0;
-        right: 0;
-        width: auto;
-    }
     .container {
         z-index: 2;
     }
@@ -37,6 +30,11 @@ header {
         background-color: rgba(0, 0, 0, .1);
         left: 0;
         z-index: 1;
+    }
+    .video{
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
     }
 }
 

@@ -17,6 +17,10 @@ import BtnSecondary from "Components/Buttons/BtnSecondary";
 import Testimonials from "Components/Testimonials";
 import CTA from "Components/CTA";
 
+import landingVideoMp4 from "Images/landing_video.mp4";
+import landingVideoWebm from "Images/landing_video.webm";
+import landingVideoOgv from "Images/landing_video.ogv";
+
 function LandingPage (props) {
     return(
         <div>
@@ -25,15 +29,15 @@ function LandingPage (props) {
                 <video autoPlay="autoplay" loop="loop" mute="mute" className="position-absolute d-none d-lg-block">
                     <source
                         type="video/mp4"
-                        src="/images/landing_video.mp4">
+                        src={landingVideoMp4}>
                     </source>
                     <source
                         type="video/webm"
-                        src="/images/landing_video.webm">
+                        src={landingVideoWebm}>
                     </source>
                     <source
                         type="video/ogv"
-                        src="/images/landing_video.ogv">
+                        src={landingVideoOgv}>
                     </source>
                 </video>
                 <div className="container">
