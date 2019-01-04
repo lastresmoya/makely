@@ -10,12 +10,12 @@ function UserDetails(props) {
           {/* Rating */}
           <div className="list-group-item">
             <strong className="text-muted font-weight-normal">RATING</strong>
-            <div className="text-warning h3">
-              <FaIcon icon={faStar}/>
-              <FaIcon icon={faStar} />
-              <FaIcon icon={faStar} />
-              <FaIcon icon={faStar} />
-              <FaIcon icon={faStar} />
+            <div className="text-warning h3 mb-0">
+              <FaIcon icon={faStar} className="h5" />
+              <FaIcon icon={faStar} className="h5" />
+              <FaIcon icon={faStar} className="h5" />
+              <FaIcon icon={faStar} className="h5" />
+              <FaIcon icon={faStar} className="h5" />
             </div>
           </div>
           {/* Badges */}
@@ -25,7 +25,7 @@ function UserDetails(props) {
               <span className="badge badge-secondary badge-circle mr-2" />
               <span className="badge badge-danger badge-circle mr-2" />
               <span className="badge badge-warning badge-circle mr-2" />
-              <span className="badge badge-primary badge-circle"/>
+              <span className="badge badge-primary badge-circle" />
             </div>
           </div>
           {/* Services */}
